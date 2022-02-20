@@ -53,6 +53,7 @@ def update_cart():
     for key, value in request.form.items():
         cart_item = Cart.query.filter_by(product_id=str(key)).filter_by(user_id=current_user.id).first()
         cart_item.quantity = value
+    db.session.commit()
     flash(f'Cart updated successfully', 'success')
     return redirect(url_for('ecommerce.cart'))
 
