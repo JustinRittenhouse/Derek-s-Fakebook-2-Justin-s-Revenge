@@ -50,6 +50,7 @@ def remove_product(id):
 
 @app.route('/products/cart/update', methods = ['POST'])
 def update_cart():
+    print(request.form)
     for key, value in request.form.items():
         cart_item = Cart.query.filter_by(product_id=str(key)).filter_by(user_id=current_user.id).first()
         cart_item.quantity = value

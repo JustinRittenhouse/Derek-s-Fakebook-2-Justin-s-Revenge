@@ -31,7 +31,7 @@
                             <img class="img-responsive" src="{{ p.product.images[0] }}" alt="{{ p.product.name }}" height="80">
                         </div>
                         <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-                            <h4 class="product-name"><strong>{{ p.product.name }}</strong></h4>
+                            <h4 class="product-name" title="{{ p.product.name }}"><strong>{{ p.product.name }}</strong></h4>
                             <h4>
                                 <small>{{ p.product.description }}</small>
                             </h4>
@@ -43,7 +43,7 @@
                             <div class="col-4 col-sm-4 col-md-4">
                                 <div class="quantity">
                                     <div class="form-group">
-                                        <input type="number" step="1" max="99" min="1" value="{{ p.quantity }}" title="{{ p.product.id }}" class="qty" size="4">
+                                        <input type="number" step="1" max="99" min="1" value="{{ p.quantity }}" name="{{ p.product.id }}" class="qty" size="4">
                                     </div>
                                 </div>
                             </div>
